@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Scene1">
+   <children>
+      <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="45.0" prefWidth="200.0" styleClass="semi-top-form" stylesheets="@Scene1.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="47.0" layoutY="-77.0" prefHeight="51.0" prefWidth="1100.0" styleClass="top-form" stylesheets="@Scene1.css" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fitHeight="38.0" fitWidth="52.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images-removebg-preview%20(3).png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="65.0" layoutY="15.0" text="Inventory Management System">
+                                 <font>
+                                    <Font name="Tahoma" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="close" cancelButton="true" defaultButton="true" layoutX="1034.0" layoutY="12.0" mnemonicParsing="false" onAction="#close" prefHeight="29.0" prefWidth="78.0" styleClass="close" stylesheets="@Scene1.css" text="Exit X" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
+                              <Button fx:id="minimize" cancelButton="true" defaultButton="true" layoutX="935.0" layoutY="3.0" mnemonicParsing="false" onAction="#setMinimize" prefHeight="28.0" prefWidth="78.0" styleClass="minimize" stylesheets="@Scene1.css" text="----" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="-26.0" layoutY="14.0" prefHeight="551.0" prefWidth="200.0" styleClass="nav-form" stylesheets="@Scene1.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fitHeight="97.0" fitWidth="124.0" layoutX="38.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images-removebg-preview%20(3).png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="70.0" layoutY="146.0" text="Welcome">
+                                 <font>
+                                    <Font name="Tahoma" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="username" alignment="CENTER" layoutY="165.0" prefHeight="23.0" prefWidth="199.0" text="Shahzaib Faisal" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="86.0" layoutX="100.0" layoutY="202.0" startX="-85.0" strokeWidth="2.0" />
+                              <Button fx:id="home_btn" layoutX="6.0" layoutY="248.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="30.0" prefWidth="194.0" styleClass="nav-btn" stylesheets="@Scene1.css" text="HOME" textFill="WHITE" AnchorPane.leftAnchor="2.0">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="22.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@home.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="addProduct_btn" layoutY="295.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="30.0" prefWidth="200.0" styleClass="nav-btn" stylesheets="@Scene1.css" text="Product" textFill="WHITE" AnchorPane.leftAnchor="0.0">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="28.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@cart.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="oders_btn" layoutX="1.0" layoutY="346.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="48.0" prefWidth="212.0" styleClass="nav-btn" stylesheets="@Scene1.css" text="Orders" textFill="WHITE" AnchorPane.leftAnchor="1.0">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="38.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@order-now.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="logout" layoutX="12.0" layoutY="505.0" mnemonicParsing="false" onAction="#setLogout" stylesheets="@Scene1.css" text="signout">
+                                 <styleClass>
+                                    <String fx:value="logout" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                              </Button>
+                              <Label layoutX="88.0" layoutY="512.0" textFill="WHITE">
+                                 <font>
+                                    <Font name="Tahoma" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="41.0" fitWidth="59.0" layoutX="79.0" layoutY="497.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@exit.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="home_form" layoutX="28.0" layoutY="46.0" prefHeight="544.0" prefWidth="898.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="21.0" layoutY="14.0" prefHeight="162.0" prefWidth="859.0" stylesheets="@Scene1.css">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <AnchorPane layoutX="14.0" layoutY="15.0" prefHeight="133.0" prefWidth="263.0" stylesheets="@Scene1.css">
+                                       <styleClass>
+                                          <String fx:value="small-window" />
+                                          <String fx:value="nav-form" />
+                                       </styleClass>
+                                       <children>
+                                          <Label fx:id="home_numberOrders" alignment="CENTER_RIGHT" layoutX="88.0" layoutY="22.0" prefHeight="22.0" prefWidth="169.0" text="0" />
+                                          <Label layoutX="79.0" layoutY="102.0" text="Todays Number of order">
+                                             <font>
+                                                <Font name="Tahoma" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fitHeight="65.0" fitWidth="103.0" layoutX="7.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@cart.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="298.0" layoutY="15.0" prefHeight="133.0" prefWidth="263.0" stylesheets="@Scene1.css">
+                                       <styleClass>
+                                          <String fx:value="small-window" />
+                                          <String fx:value="nav-form" />
+                                       </styleClass>
+                                       <children>
+                                          <Label fx:id="home_totalIncome" alignment="CENTER_RIGHT" layoutX="84.0" layoutY="17.0" prefHeight="22.0" prefWidth="169.0" text="0.0PKR" />
+                                          <Label layoutX="75.0" layoutY="97.0" text="Total Income">
+                                             <font>
+                                                <Font name="Tahoma" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fitHeight="88.0" fitWidth="91.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@money-bag.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="582.0" layoutY="15.0" prefHeight="133.0" prefWidth="263.0" stylesheets="@Scene1.css">
+                                       <styleClass>
+                                          <String fx:value="small-window" />
+                                          <String fx:value="nav-form" />
+                                       </styleClass>
+                                       <children>
+                                          <Label fx:id="home_avaliableProduct" alignment="CENTER_RIGHT" layoutX="84.0" layoutY="19.0" prefHeight="22.0" prefWidth="169.0" text="0" />
+                                          <Label layoutX="75.0" layoutY="99.0" text="Avilable Product">
+                                             <font>
+                                                <Font name="Tahoma" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fitHeight="88.0" fitWidth="91.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@add-product.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="21.0" layoutY="202.0" prefHeight="331.0" prefWidth="859.0" stylesheets="@Scene1.css">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="307.0" prefWidth="447.0" stylesheets="@Scene1.css">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <AreaChart fx:id="home_incomeChart" layoutX="-27.0" layoutY="-63.0" prefHeight="337.0" prefWidth="473.0" title="Income Data Chart " AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                          </AreaChart>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="483.0" layoutY="14.0" prefHeight="307.0" prefWidth="362.0" stylesheets="@Scene1.css">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <BarChart fx:id="home_orderChart" layoutX="-24.0" layoutY="-64.0" prefHeight="336.0" prefWidth="476.0" title="Order Data Chart" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                          </BarChart>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <Line endX="751.9000244140625" layoutX="122.0" layoutY="188.0" startX="-100.0" stroke="RED" />
+                              <Line endX="744.9000244140625" layoutX="132.0" layoutY="198.0" startX="-108.10000610351562" stroke="#d6ff00" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="addProduct_form" layoutX="14.0" layoutY="81.0" prefHeight="544.0" prefWidth="898.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="12.0" prefHeight="524.0" prefWidth="312.0" stylesheets="@Scene1.css">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <AnchorPane layoutX="84.0" layoutY="28.0" prefHeight="168.0" prefWidth="144.0" stylesheets="@Scene1.css">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <ImageView fx:id="addProduct_imageView" fitHeight="168.0" fitWidth="144.0" layoutX="2.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+                                          <Button fx:id="addProduct_importBtn" layoutX="1.0" layoutY="145.0" mnemonicParsing="false" onAction="#importImage" prefHeight="29.0" prefWidth="143.0" styleClass="import-btn" stylesheets="@Scene1.css" text="Import" />
+                                       </children>
+                                    </AnchorPane>
+                                    <Label layoutX="40.0" layoutY="232.0" text="Product Id: " />
+                                    <TextField fx:id="addProduct_brand" layoutX="110.0" layoutY="312.0" styleClass="textfield" stylesheets="@Scene1.css" />
+                                    <Label layoutX="32.0" layoutY="273.0" text="Product Type: " />
+                                    <Label layoutX="67.0" layoutY="316.0" text="Brand:" />
+                                    <TextField fx:id="addProduct_productId" layoutX="109.0" layoutY="228.0" styleClass="textfield" stylesheets="@Scene1.css" />
+                                    <Label layoutX="30.0" layoutY="351.0" text="Product Name: " />
+                                    <TextField fx:id="addProduct_productName" layoutX="110.0" layoutY="347.0" styleClass="textfield" stylesheets="@Scene1.css" />
+                                    <Button fx:id="addProduct_addBtn" layoutX="48.0" layoutY="413.0" mnemonicParsing="false" onAction="#setAddProduct_addBtn" prefHeight="37.0" prefWidth="73.0" styleClass="add-btn" stylesheets="@Scene1.css" text="Add" />
+                                    <Button fx:id="addProduct_updateBtn" layoutX="163.0" layoutY="413.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="73.0" styleClass="update-btn" stylesheets="@Scene1.css" text="Update" />
+                                    <Button fx:id="addProduct_resetBtn" layoutX="48.0" layoutY="470.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="73.0" styleClass="clear-btn" stylesheets="@Scene1.css" text="Reset" />
+                                    <Button fx:id="addProduct_deleteBtn" layoutX="163.0" layoutY="470.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="73.0" styleClass="delete-btn" stylesheets="@Scene1.css" text="Delete" />
+                                    <Label layoutX="68.0" layoutY="380.0" text="Status:" />
+                                    <TextField fx:id="addProduct_status" layoutX="110.0" layoutY="376.0" styleClass="textfield" stylesheets="@Scene1.css" />
+                                    <TextField fx:id="addProduct_productType" layoutX="109.0" layoutY="269.0" styleClass="textfield" stylesheets="@Scene1.css" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="348.0" layoutY="12.0" prefHeight="521.0" prefWidth="536.0" stylesheets="@Scene1.css">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <TableView fx:id="addProduct_tableView" layoutX="5.0" layoutY="50.0" prefHeight="457.0" prefWidth="526.0">
+                                      <columns>
+                                        <TableColumn fx:id="addProduct_col_productId" prefWidth="88.0" text="Product id" />
+                                        <TableColumn fx:id="addProduct_col_type" prefWidth="61.0" text="Type" />
+                                          <TableColumn fx:id="addProduct_col_brand" prefWidth="97.0" text="Brand Name" />
+                                          <TableColumn fx:id="addProduct_col_productName" prefWidth="149.0" text="Product Name" />
+                                          <TableColumn fx:id="addProduct_col_price" prefWidth="61.0" text="Price" />
+                                          <TableColumn fx:id="addProduct_col_status" prefWidth="67.0" text="Status" />
+                                      </columns>
+                                    </TableView>
+                                    <TextField fx:id="addProduct_search" layoutX="23.0" layoutY="14.0" prefHeight="25.0" prefWidth="272.0" promptText="Search" styleClass="search" stylesheets="@Scene1.css" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="orders_form" layoutX="14.0" layoutY="22.0" prefHeight="544.0" prefWidth="898.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="522.0" prefWidth="522.0" stylesheets="@Scene1.css">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <TableView fx:id="orders_tableView" layoutX="14.0" layoutY="47.0" prefHeight="522.0" prefWidth="522.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="orders_col_type" prefWidth="75.0" text="Type" />
+                                        <TableColumn fx:id="orders_col_brand" prefWidth="81.0" text="Brand" />
+                                          <TableColumn fx:id="orders_col_productName" prefWidth="174.0" text="Product Name" />
+                                          <TableColumn fx:id="orders_col_quantity" prefWidth="92.0" text="Quantity" />
+                                          <TableColumn fx:id="orders_col_price" prefWidth="98.0" text="Price" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="555.0" layoutY="11.0" prefHeight="522.0" prefWidth="329.0" stylesheets="@Scene1.css">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <Label layoutX="56.0" layoutY="42.0" text="Product Type:" />
+                                    <ComboBox fx:id="orders_productType" layoutX="136.0" layoutY="38.0" prefWidth="150.0" styleClass="textfield" stylesheets="@Scene1.css" />
+                                    <Label layoutX="61.0" layoutY="93.0" text="Brand Name:" />
+                                    <ComboBox fx:id="orders_brandName" layoutX="136.0" layoutY="89.0" prefWidth="150.0" styleClass="textfield" stylesheets="@Scene1.css" />
+                                    <Label layoutX="50.0" layoutY="141.0" text="Product Name:" />
+                                    <ComboBox fx:id="orders_productName" layoutX="136.0" layoutY="137.0" prefWidth="150.0" styleClass="textfield" stylesheets="@Scene1.css" />
+                                    <Spinner fx:id="orders_quantity" layoutX="137.0" layoutY="189.0" prefHeight="25.0" prefWidth="134.0" styleClass="search" stylesheets="@Scene1.css" />
+                                    <Label layoutX="80.0" layoutY="193.0" text="Quantity:" />
+                                    <Button fx:id="orders_addBtn" layoutX="207.0" layoutY="243.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="69.0" styleClass="add-btn" stylesheets="@Scene1.css" text="Add" />
+                                    <Label layoutX="50.0" layoutY="276.0" text="Total:">
+                                       <font>
+                                          <Font name="Tahoma" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="orders_total" layoutX="105.0" layoutY="274.0" text="0.0PKR">
+                                       <font>
+                                          <Font name="Tahoma" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="46.0" layoutY="360.0" text="Balance:">
+                                       <font>
+                                          <Font name="Tahoma" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="orders_balance" layoutX="130.0" layoutY="357.0" text="0.0PKR">
+                                       <font>
+                                          <Font name="Tahoma" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="46.0" layoutY="319.0" text="Amount:">
+                                       <font>
+                                          <Font name="Tahoma" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="orders_amount" layoutX="130.0" layoutY="319.0" styleClass="search" stylesheets="@Scene1.css" />
+                                    <Button fx:id="orders_payBtn" layoutX="46.0" layoutY="405.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="69.0" styleClass="pay-btn" stylesheets="@Scene1.css" text="Pay" />
+                                    <Button fx:id="orders_reciptBtn" layoutX="172.0" layoutY="405.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="69.0" styleClass="receipt-btn" stylesheets="@Scene1.css" text="Recipt" />
+                                    <Button fx:id="orders_resetBtn" layoutX="46.0" layoutY="455.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="69.0" styleClass="clear-btn" stylesheets="@Scene1.css" text="Reset" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
